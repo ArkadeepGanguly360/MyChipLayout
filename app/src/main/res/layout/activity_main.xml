@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.development.mychiplayout.MainActivity"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.libaml.android.view.chip.ChipLayout
+            android:id="@+id/et_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_corner_otp_bg"
+            android:foregroundGravity="center_vertical"
+            android:padding="8dp"
+            app:chipDrawable_="@drawable/rounded_corner_ash_bg2"
+            app:chipPadding_="5dp"
+            app:chipTextPadding_="4dp"
+            app:deleteIcon_="@android:drawable/presence_offline"
+            app:hintColor_="@android:color/darker_gray"
+            app:hint_="Enter their kids"
+            app:labelPosition_="left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor_="#6D6C6C"
+            app:textSize_="5sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_friends"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="Save"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
